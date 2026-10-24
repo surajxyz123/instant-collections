@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://surajxyz123.github.io/instant-collections/sitemap.xml
