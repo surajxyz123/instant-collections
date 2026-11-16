@@ -1,0 +1,183 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><title>Instant Notes - All-in-one Android app</title><meta name="description" content="Instant Notes v3.99 Multiverse Mode - notes, vault, tools, AI hub, games and now live chat games, collab notes and shared lists with friends. Free for Android.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://surajxyz123.github.io/instant-collections/notes.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Instant Collections">
+<meta property="og:title" content="Instant Notes - All-in-one Android app">
+<meta property="og:description" content="Notes, vault, 25+ tools, AI hub, games - and now play, write and build live with friends. Free for Android.">
+<meta property="og:url" content="https://surajxyz123.github.io/instant-collections/notes.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Instant Notes - All-in-one Android app">
+<meta name="twitter:description" content="Notes, vault, 25+ tools, AI hub, games - and now play, write and build live with friends. Free for Android."><style>
+* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+:root{
+--bg:#070b16; --bg2:#0b1226; --card:rgba(255,255,255,.045); --stroke:rgba(255,255,255,.09);
+--txt:#eef2ff; --dim:#94a3c7; --accent:#5b8cff; --accent2:#9b5bff; --green:#2dd4a7; --pink:#ff5b8d; --amber:#ffb54d;
+}
+html{ scroll-behavior:smooth; }
+body{
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+background:var(--bg); color:var(--txt); min-height:100vh; overflow-x:hidden; line-height:1.55;
+}
+.bg{ position:fixed; inset:0; z-index:-2; background:
+radial-gradient(120% 90% at 80% -10%, #14224d 0%, transparent 55%),
+radial-gradient(100% 80% at -10% 30%, #1a1340 0%, transparent 55%),
+linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%); }
+.blob{ position:fixed; border-radius:50%; filter:blur(70px); opacity:.35; z-index:-1; animation:drift 16s ease-in-out infinite alternate; }
+.b1{ width:260px; height:260px; background:#3b6cff; top:-60px; right:-70px; }
+.b2{ width:220px; height:220px; background:#8b3bff; top:38%; left:-90px; animation-delay:-5s; animation-duration:19s; }
+.b3{ width:180px; height:180px; background:#0fbba6; bottom:-50px; right:-40px; animation-delay:-9s; animation-duration:22s; opacity:.22; }
+@keyframes drift{ from{ transform:translate(0,0) scale(1); } to{ transform:translate(30px,40px) scale(1.15); } }
+.wrap{ max-width:720px; margin:0 auto; padding:0 20px 90px; }
+/* top nav */
+nav{ display:flex; align-items:center; justify-content:space-between; padding:18px 0 0; }
+nav a{ color:var(--dim); text-decoration:none; font-size:13.5px; display:inline-flex; align-items:center; gap:6px; }
+nav a:hover{ color:var(--txt); }
+nav .links{ display:flex; gap:18px; }
+/* hero */
+header{ text-align:center; padding:56px 0 30px; }
+.pill{ display:inline-flex; align-items:center; gap:7px; font-size:12.5px; letter-spacing:.4px; color:var(--dim);
+border:1px solid var(--stroke); background:var(--card); padding:7px 15px; border-radius:100px;
+backdrop-filter:blur(8px); animation:fadeDown .8s cubic-bezier(.2,.8,.2,1) both; }
+.pill .dot{ width:7px; height:7px; border-radius:50%; background:var(--green); box-shadow:0 0 10px var(--green); animation:pulse 2.2s infinite; }
+@keyframes pulse{ 0%,100%{ transform:scale(1); opacity:1;} 50%{ transform:scale(1.5); opacity:.55;} }
+.appicon{ width:88px; height:88px; margin:0 auto 18px; border-radius:24px; display:grid; place-items:center;
+background:linear-gradient(145deg,#1d3fae,#0c1f5e);
+box-shadow:0 16px 40px rgba(20,60,200,.4), inset 0 1px 0 rgba(255,255,255,.25);
+animation:bob 5s ease-in-out infinite, fadeDown .8s .05s cubic-bezier(.2,.8,.2,1) both; }
+.appicon svg{ width:46px; height:46px; }
+@keyframes bob{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-6px);} }
+h1{ margin-top:18px; font-size:clamp(40px,10vw,60px); font-weight:800; letter-spacing:-1.4px; line-height:1.05;
+background:linear-gradient(100deg,#fff 15%,#8db2ff 40%,#c29bff 60%,#fff 85%);
+background-size:220% 100%; -webkit-background-clip:text; background-clip:text; color:transparent;
+animation:shine 6s linear infinite, fadeDown .9s .12s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes shine{ to{ background-position:-220% 0; } }
+.sub{ margin-top:14px; color:var(--dim); font-size:16.5px; max-width:460px; margin-left:auto; margin-right:auto;
+animation:fadeDown 1s .24s cubic-bezier(.2,.8,.2,1) both; }
+.stats{ display:flex; justify-content:center; gap:10px; margin-top:24px; animation:fadeDown 1s .34s cubic-bezier(.2,.8,.2,1) both; flex-wrap:wrap; }
+.stat{ border:1px solid var(--stroke); background:var(--card); border-radius:14px; padding:9px 16px; font-size:13px; color:var(--dim); backdrop-filter:blur(8px); }
+.stat b{ color:var(--txt); font-size:15px; display:block; }
+.cta{ display:flex; gap:12px; justify-content:center; margin-top:30px; flex-wrap:wrap; animation:fadeDown 1s .44s cubic-bezier(.2,.8,.2,1) both; }
+.btn{ position:relative; overflow:hidden; min-width:170px; text-align:center; text-decoration:none; font-weight:700; font-size:15.5px;
+padding:15px 24px; border-radius:16px; transition:transform .18s, box-shadow .3s; display:inline-flex; align-items:center; justify-content:center; gap:9px; }
+.btn svg{ width:18px; height:18px; }
+.btn:active{ transform:scale(.96); }
+.btn-p{ color:#fff; background:linear-gradient(120deg,var(--accent),var(--accent2)); box-shadow:0 8px 24px rgba(91,110,255,.38); }
+.btn-p::after{ content:""; position:absolute; top:0; left:-80%; width:50%; height:100%; transform:skewX(-20deg);
+background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent); animation:sweep 3.2s ease-in-out infinite; }
+@keyframes sweep{ 0%,55%{ left:-80%; } 100%{ left:130%; } }
+.btn-g{ color:var(--txt); border:1px solid var(--stroke); background:rgba(255,255,255,.05); }
+@keyframes fadeDown{ from{ opacity:0; transform:translateY(-18px);} to{ opacity:1; transform:none;} }
+/* sections */
+.sec-title{ display:flex; align-items:center; gap:12px; margin:52px 0 18px; }
+.sec-title h2{ font-size:20px; font-weight:700; letter-spacing:-.3px; }
+.sec-title .line{ flex:1; height:1px; background:linear-gradient(90deg,var(--stroke),transparent); }
+/* feature cards */
+.feat{ position:relative; border:1px solid var(--stroke); border-radius:22px; padding:22px; margin-bottom:16px; overflow:hidden;
+background:linear-gradient(160deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); backdrop-filter:blur(14px);
+opacity:0; transform:translateY(30px); transition:opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1); }
+.feat.show{ opacity:1; transform:none; }
+.feat::before{ content:""; position:absolute; inset:0; border-radius:22px; padding:1px; pointer-events:none;
+background:linear-gradient(140deg, rgba(91,140,255,.5), transparent 30%, transparent 70%, rgba(155,91,255,.4));
+-webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask-composite:exclude; opacity:.55; }
+.feat-head{ display:flex; align-items:center; gap:13px; margin-bottom:6px; flex-wrap:wrap; }
+.feat-ico{ width:42px; height:42px; border-radius:13px; display:grid; place-items:center; flex:none;
+box-shadow:0 8px 20px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.2); }
+.feat-ico svg{ width:22px; height:22px; }
+.feat h3{ font-size:18.5px; font-weight:750; letter-spacing:-.3px; }
+.feat .badge{ font-size:10.5px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; padding:3px 10px; border-radius:100px;
+background:linear-gradient(120deg,var(--pink),var(--amber)); color:#1a0b12; }
+.feat p{ color:var(--dim); font-size:14.5px; margin:8px 0 12px; }
+.tags{ display:flex; flex-wrap:wrap; gap:7px; }
+.tag{ font-size:12px; color:#c3cdf0; background:rgba(91,140,255,.12); border:1px solid rgba(91,140,255,.22); padding:4px 11px; border-radius:100px; }
+.i-blue{ background:linear-gradient(145deg,#1d3fae,#0c1f5e); }
+.i-purple{ background:linear-gradient(145deg,#7b2ff7,#3b1178); }
+.i-teal{ background:linear-gradient(145deg,#0d9488,#065f56); }
+.i-pink{ background:linear-gradient(145deg,#e14a7c,#7c1d46); }
+.i-amber{ background:linear-gradient(145deg,#d97706,#92400e); }
+.i-slate{ background:linear-gradient(145deg,#475569,#1e293b); }
+/* gallery */
+.gallery{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+.shot{ border:1px solid var(--stroke); border-radius:18px; overflow:hidden; background:var(--card);
+opacity:0; transform:translateY(26px); transition:opacity .6s, transform .6s; }
+.shot.show{ opacity:1; transform:none; }
+.shot img{ width:100%; display:block; aspect-ratio:410/790; object-fit:cover; }
+.shot figcaption{ padding:10px 13px; font-size:12.5px; color:var(--dim); }
+.shot figcaption b{ color:var(--txt); display:block; font-size:13px; }
+/* honest box */
+.honest{ border:1px solid rgba(255,181,77,.3); background:rgba(255,181,77,.06); border-radius:20px; padding:20px; }
+.honest h3{ font-size:15.5px; color:var(--amber); margin-bottom:10px; display:flex; align-items:center; gap:8px; }
+.honest h3 svg{ width:17px; height:17px; }
+.honest ul{ margin-left:18px; color:var(--dim); font-size:13.8px; display:flex; flex-direction:column; gap:7px; }
+footer{ text-align:center; margin-top:56px; color:var(--dim); font-size:12.5px; }
+footer .heart{ color:var(--pink); display:inline-block; animation:beat 1.6s ease-in-out infinite; }
+@keyframes beat{ 0%,100%{ transform:scale(1);} 12%{ transform:scale(1.3);} 24%{ transform:scale(1);} }
+footer a{ color:#9fc0ff; text-decoration:none; }
+@media (min-width:640px){ .gallery{ grid-template-columns:repeat(3,1fr); } }
+</style></head><body><div class="bg"></div><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="wrap">
+<nav><a href="./index.html">&#8592; Instant Collections</a><div class="links"><a href="./notes-versions.html">Versions</a><a href="./notes-install.html">Install</a></div></nav>
+<header>
+<div class="appicon"><svg viewBox="0 0 24 24" fill="none" stroke="#cfe0ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h11l3 3v15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" fill="rgba(255,255,255,.08)"/><path d="M16 3v3h3"/><path d="M8 10h8M8 14h8M8 18h5"/></svg></div>
+<span class="pill"><span class="dot"></span>v3.99 Multiverse Mode is live</span>
+<h1>Instant Notes</h1>
+<p class="sub">One app for your whole phone life - notes, tasks, a hidden vault, 25+ tools, an AI hub, games, and now a whole multiverse to share with friends.</p>
+<div class="stats"><div class="stat"><b>v3.99</b>Latest build</div><div class="stat"><b>~22.5 MB</b>Size</div><div class="stat"><b>100%</b>Free, no ads</div><div class="stat"><b>0</b>New permissions</div></div>
+<div class="cta"><a class="btn btn-p" href="./notes-install.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>Get the app</a><a class="btn btn-g" href="./notes-versions.html">Version history</a></div>
+</header>
+
+<div class="sec-title"><h2>What is inside</h2><div class="line"></div></div>
+
+<section class="feat"><div class="feat-head"><div class="feat-ico i-pink"><svg viewBox="0 0 24 24" fill="none" stroke="#ffd7e4" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></div><h3>Multiverse Mode</h3><span class="badge">New in v3.99</span></div>
+<p>Play, write and build together - live. Challenge a friend to Tic Tac Toe, full-rules Chess or a Doodle Battle with voting, co-edit the same note at the same time, share ticking lists, send WhatsApp-style voice messages, grow a shared Hidden Leaf Village and climb the Friend Ranks leaderboard.</p>
+<div class="tags"><span class="tag">Chat Games</span><span class="tag">Collab Notes</span><span class="tag">Shared Lists</span><span class="tag">Voice Messages</span><span class="tag">Shared Village</span><span class="tag">Friend Ranks</span></div></section>
+
+<section class="feat"><div class="feat-head"><div class="feat-ico i-blue"><svg viewBox="0 0 24 24" fill="none" stroke="#cfe0ff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M8 10h8M8 14h5"/><path d="M21 12a9 9 0 1 1-4.4-7.7L21 3l-.7 3.6A8.9 8.9 0 0 1 21 12z"/></svg></div><h3>Instant Chat + Packs</h3></div>
+<p>A private chat built into your notes app. Just a username and password - no phone number, no email, no personal data. Text, photos and files with sent, delivered and read ticks. Dress the app up with sound packs, six font packs and 24 original stickers, plus the Leaf Catch mini game.</p>
+<div class="tags"><span class="tag">Username only</span><span class="tag">Photos &amp; files</span><span class="tag">Sound packs</span><span class="tag">Fonts</span><span class="tag">Stickers</span></div></section>
+
+<section class="feat"><div class="feat-head"><div class="feat-ico i-amber"><svg viewBox="0 0 24 24" fill="none" stroke="#ffe3ba" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.2 6.2L21 9.3l-5 4.1 1.8 6.6L12 16.4 6.2 20l1.8-6.6-5-4.1 6.8-1.1z"/></svg></div><h3>Hokage Mode</h3></div>
+<p>Tell your phone what to do in plain Hinglish. The Sensei command bar sets alarms, opens the vault and writes notes by voice or text. Jutsu Macros fire actions on a shake, wave or back tap, Daily Scroll plans your day, Mission + Rank turns habits into a Hokage journey, and Seal Search finds anything in the app.</p>
+<div class="tags"><span class="tag">Sensei commands</span><span class="tag">Jutsu Macros</span><span class="tag">Daily Scroll</span><span class="tag">Mission + Rank</span><span class="tag">Seal Search</span></div></section>
+
+<section class="feat"><div class="feat-head"><div class="feat-ico i-purple"><svg viewBox="0 0 24 24" fill="none" stroke="#e3d4ff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.5 13.5H11L9.5 22 19 9.5h-6.5z"/></svg></div><h3>Baryon Mode</h3></div>
+<p>Build your own tools without code - buttons, counters, checklists, timers, whatever you need. Restyle the whole app in Theme Studio, grow your own Hidden Leaf Village from finished tasks, chain Sensei commands, and beam notes and themes to a friend offline with QR Bridge.</p>
+<div class="tags"><span class="tag">Tool Maker</span><span class="tag">Theme Studio</span><span class="tag">Hidden Leaf Village</span><span class="tag">QR Bridge</span><span class="tag">Home widget</span></div></section>
+
+<section class="feat"><div class="feat-head"><div class="feat-ico i-teal"><svg viewBox="0 0 24 24" fill="none" stroke="#b9f2e8" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></div><h3>Sage Mode</h3></div>
+<p>A full design system under every screen, a motion engine with a Reduced mode that respects your phone settings, a redesigned Tools page, a brand-new icon with an animated splash and welcome tour, skeleton loaders, friendly empty states and haptics on every tap.</p>
+<div class="tags"><span class="tag">Design system</span><span class="tag">Motion engine</span><span class="tag">New icon</span><span class="tag">Haptics</span></div></section>
+
+<section class="feat"><div class="feat-head"><div class="feat-ico i-slate"><svg viewBox="0 0 24 24" fill="none" stroke="#d4deef" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H4z"/><path d="M2 19h20M9 8h6M9 11h4"/></svg></div><h3>And the everyday everything</h3></div>
+<p>Rich notes with drawing, a hidden vault opened by a secret keyword, private spaces in Files and Gallery, a music player, news, a full browser, calendar, alarms, 25+ tools from OCR to a 3D model viewer, an AI hub, offline games and 60+ themes including auto festival themes.</p>
+<div class="tags"><span class="tag">Notes &amp; tasks</span><span class="tag">Hidden vault</span><span class="tag">25+ tools</span><span class="tag">AI Hub</span><span class="tag">Offline games</span><span class="tag">60+ themes</span></div></section>
+
+<div class="sec-title"><h2>Screenshots</h2><div class="line"></div></div>
+<p style="color:var(--dim);font-size:13.5px;margin:-6px 0 16px;">Real app screens of the new Multiverse Mode, rendered on a computer against the live server.</p>
+<div class="gallery">
+<figure class="shot"><img src="./1-notes-voice.webp" alt="Voice message playing inside Instant Chat" loading="lazy"><figcaption><b>Voice messages</b>Record and play, right inside chat</figcaption></figure>
+<figure class="shot"><img src="./2-notes-ttt.webp" alt="Tic Tac Toe game in chat" loading="lazy"><figcaption><b>Tic Tac Toe</b>Live moves, instant rematch</figcaption></figure>
+<figure class="shot"><img src="./3-notes-chess.webp" alt="Chess game with legal move hints" loading="lazy"><figcaption><b>Chess</b>Full rules - castling, en passant, promotion</figcaption></figure>
+<figure class="shot"><img src="./4-notes-doodle.webp" alt="Doodle Battle voting screen" loading="lazy"><figcaption><b>Doodle Battle</b>Draw, then vote for the winner</figcaption></figure>
+<figure class="shot"><img src="./5-notes-collab.webp" alt="Collab note being co-edited" loading="lazy"><figcaption><b>Collab Notes</b>Two friends, one note, live</figcaption></figure>
+<figure class="shot"><img src="./6-notes-lists.webp" alt="Shared list with live ticks" loading="lazy"><figcaption><b>Shared Lists</b>Everyone sees every tick, live</figcaption></figure>
+<figure class="shot"><img src="./7-notes-village.webp" alt="Shared Hidden Leaf Village" loading="lazy"><figcaption><b>Shared Village</b>Grow the Hidden Leaf together</figcaption></figure>
+<figure class="shot"><img src="./8-notes-ranks.webp" alt="Friend Ranks leaderboard" loading="lazy"><figcaption><b>Friend Ranks</b>Who becomes the real Hokage</figcaption></figure>
+</div>
+
+<div class="sec-title"><h2>Straight talk</h2><div class="line"></div></div>
+<div class="honest"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5m0 3v.01"/></svg>Good to know</h3>
+<ul>
+<li>Instant Notes is not on the Play Store. You install it directly (sideload) - it takes under a minute and your data stays on update.</li>
+<li>Chat and Multiverse features run on a small free server. It has free-tier limits and pauses after a week of no use; one tap brings it back.</li>
+<li>Multiverse features need your friends on v3.99 too - send them the install page.</li>
+<li>Chats are not end-to-end encrypted. Keep passwords and very private things out of chat.</li>
+<li>No push notifications: new messages appear while the app is open.</li>
+</ul></div>
+
+<div class="cta" style="margin-top:38px;"><a class="btn btn-p" href="./notes-install.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>Install v3.99</a></div>
+
+<footer>Instant Notes <span class="heart">&#10084;</span> Built by Suraj &middot; <a href="https://github.com/surajxyz123" target="_blank" rel="noopener">@surajxyz123</a><br>&copy; 2026 &middot; Free for everyone</footer>
+</div><script>
+const io = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } }); }, { threshold: .1 });
+document.querySelectorAll('.feat, .shot').forEach(el => io.observe(el));
+</script></body></html>
